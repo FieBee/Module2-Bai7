@@ -14,9 +14,6 @@ public class Main {
 
         Book[] arr = {book1,book2,book3,book4,book5,book6,book7,book8,book9,book10};
 
-        ProgrammingBook[] arr1 = {book1,book2,book3,book4,book5};
-
-        FictionBook[] arr2 = {book6,book7,book8,book9,book10};
 
 
 //        Tổng giá 10 cuốn sách
@@ -24,14 +21,14 @@ public class Main {
 
 
 //        Số sách ProgrammingBook có language là "Java"
-        System.out.println("So sach ProgrammingBook co language \"Java\" la: " + checkLanguage(arr1));
-
+        System.out.println("So sach ProgrammingBook co language \"Java\" la: " + checkLanguage(arr,"Java"));
+//
 //        Số sách Fiction có category là “Viễn tưởng 1”
-        System.out.println("So sach Fiction co category “Viễn tưởng 1” la: "+ checkCategory(arr2) );
-
-
+        System.out.println("So sach Fiction co category “Viễn tưởng 1” la: "+ checkCategory(arr,"Viễn tưởng 1" ) );
+//
+//
 //        Số sách Fiction có giá <100.
-        System.out.println("so sach Fiction co gia <100 la: "+ checkPriceFiction(arr2));
+        System.out.println("so sach Fiction co gia <100 la: "+ checkPriceFiction(arr, 100));
 
     }
 
@@ -43,33 +40,42 @@ public class Main {
         return sum;
     }
 
-    public static int checkLanguage(ProgrammingBook[]arr){
+    public static int checkLanguage(Book[]arr, String string){
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i].getLanguage() == "Java"){
-                count++;
+            if (arr[i] instanceof ProgrammingBook){
+                String string1 = ((ProgrammingBook) arr[i]).getLanguage();
+                if (string1.equals(string)){
+                    count++;
+                }
             }
         }
         return count;
     }
 
-    public static int checkCategory(FictionBook[] arr){
+    public static int checkCategory(Book[] arr, String string){
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i].getCategory() == "Viễn tưởng 1"){
-                count++;
+            if (arr[i] instanceof FictionBook){
+                String string1 = ((FictionBook) arr[i]).getCategory();
+                if (string1.equals(string)){
+                    count++;
+                }
             }
 
         }
         return count;
     }
 
-    public static int checkPriceFiction(FictionBook[]arr){
+    public static int checkPriceFiction(Book[]arr, int price) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i].getPrice() < 100){
-                count++;
+            if (arr[i] instanceof FictionBook) {
+                if (arr[i].getPrice() < price) {
+                    count++;
+                }
             }
+
         }
         return count;
     }

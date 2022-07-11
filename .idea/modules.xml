@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Bai7.iml" filepath="$PROJECT_DIR$/.idea/Bai7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interface Comparable/Interface Comparable.iml" filepath="$PROJECT_DIR$/Interface Comparable/Interface Comparable.iml" />
       <module fileurl="file://$PROJECT_DIR$/MiniTest-1/MiniTest-1.iml" filepath="$PROJECT_DIR$/MiniTest-1/MiniTest-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/TH - Animal and interface Edible/TH - Animal and interface Edible.iml" filepath="$PROJECT_DIR$/TH - Animal and interface Edible/TH - Animal and interface Edible.iml" />
     </modules>

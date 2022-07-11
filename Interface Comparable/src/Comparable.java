@@ -1,3 +1,3 @@
-public interface Comparable {
+public interface Comparable <C extends Circle> {
 
 }
